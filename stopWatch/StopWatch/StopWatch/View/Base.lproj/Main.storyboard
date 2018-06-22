@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ewi-Pm-n0K">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" verticalHuggingPriority="247" translatesAutoresizingMaskIntoConstraints="NO" id="JE0-bQ-X9g" userLabel="clockBg">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="368"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vO3-O1-wRF" userLabel="Timer">
+                                                <rect key="frame" x="57" y="131.33333333333334" width="300" height="105.33333333333334"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="77"/>
+                                                <color key="textColor" red="0.99890942260000004" green="0.99890942260000004" blue="0.99890942260000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vO3-O1-wRF" secondAttribute="trailing" id="PKR-CY-kfK"/>
+                                            <constraint firstItem="vO3-O1-wRF" firstAttribute="centerY" secondItem="JE0-bQ-X9g" secondAttribute="centerY" id="ikr-oX-7ui"/>
+                                            <constraint firstItem="vO3-O1-wRF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JE0-bQ-X9g" secondAttribute="leading" id="maJ-Vh-Bnh"/>
+                                            <constraint firstItem="vO3-O1-wRF" firstAttribute="centerX" secondItem="JE0-bQ-X9g" secondAttribute="centerX" id="zB5-H5-M1I"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleAspectFit" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="y4C-hI-ZEO" userLabel="buttonStack">
+                                        <rect key="frame" x="0.0" y="368" width="414" height="368"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleAspectFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="akx-oK-IoN">
+                                                <rect key="frame" x="8" y="151.66666666666663" width="398" height="191.33333333333337"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLH-pi-gkF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="191.66666666666666" height="191.33333333333334"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="JLH-pi-gkF" secondAttribute="height" multiplier="1:1" id="cKs-aM-yG7"/>
+                                                        </constraints>
+                                                        <state key="normal" image="Play"/>
+                                                        <connections>
+                                                            <action selector="playButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z2y-88-Hbo"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7G-Jq-S4S">
+                                                        <rect key="frame" x="206.66666666666663" y="0.0" width="191.33333333333337" height="191.33333333333334"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="x7G-Jq-S4S" secondAttribute="height" multiplier="1:1" id="pwf-4i-Ufa"/>
+                                                        </constraints>
+                                                        <state key="normal" image="Pause"/>
+                                                        <connections>
+                                                            <action selector="pauseResetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2WT-a6-WSs"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.36681385757431562" green="0.38336770304568524" blue="0.38211862723682988" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="akx-oK-IoN" secondAttribute="trailing" constant="8" id="1Z7-UM-avM"/>
+                                            <constraint firstItem="akx-oK-IoN" firstAttribute="leading" secondItem="y4C-hI-ZEO" secondAttribute="leading" constant="8" id="NOO-rL-HEn"/>
+                                            <constraint firstAttribute="bottom" secondItem="akx-oK-IoN" secondAttribute="bottom" constant="25" id="XfF-ez-jYv"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="y4C-hI-ZEO" firstAttribute="height" secondItem="JE0-bQ-X9g" secondAttribute="height" id="6HA-GY-J9c"/>
+                                    <constraint firstItem="JE0-bQ-X9g" firstAttribute="top" secondItem="ewi-Pm-n0K" secondAttribute="top" id="KE5-Ff-pLc"/>
+                                    <constraint firstItem="JE0-bQ-X9g" firstAttribute="leading" secondItem="ewi-Pm-n0K" secondAttribute="leading" id="TSw-5v-rUe"/>
+                                    <constraint firstAttribute="trailing" secondItem="JE0-bQ-X9g" secondAttribute="trailing" id="vCZ-Jn-wif"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ewi-Pm-n0K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9In-i2-VnY"/>
+                            <constraint firstAttribute="trailing" secondItem="ewi-Pm-n0K" secondAttribute="trailing" id="9w4-Wu-pMe"/>
+                            <constraint firstItem="ewi-Pm-n0K" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="f7f-NR-38u"/>
+                            <constraint firstItem="ewi-Pm-n0K" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="tuL-Jb-zaX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pauseResetButton" destination="x7G-Jq-S4S" id="tAz-MT-utj"/>
+                        <outlet property="playButton" destination="JLH-pi-gkF" id="Mzk-fU-Imt"/>
+                        <outlet property="timerLabel" destination="vO3-O1-wRF" id="gRM-M6-KNw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.39130434782609" y="118.20652173913044"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Pause" width="100" height="100"/>
+        <image name="Play" width="100" height="100"/>
+    </resources>
+</document>
